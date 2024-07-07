@@ -11,11 +11,12 @@ echo
 set -e
 FIMAGE=$1
 
-echo "$FIMAGE"
+
 
 
 rebootFastbootD () {
 	echo "we now boot the phone into FastbootD"
+ 	echo "$FIMAGE"
 	fastboot reboot fastboot
 }
 
