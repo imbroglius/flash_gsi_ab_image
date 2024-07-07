@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo
+echo "--------------------------------------"
+echo "          Flash ImbrogliOS Script     "
+echo "                  by                  "
+echo "              Imbroglius            "
+echo "--------------------------------------"
+echo
+
+set -e
+
+IMAGE_FILE=$1
+
+rebootFastbootD () {
+	echo "we now boot the phone into FastbootD"
+	fastboot reboot fastboot
+}
+
+deletePartitions () {
+	echo "Now we delete the partitions"
+	fastboot delete-logical-partition product
+	fastboot delete-logical-partition product_a
+	fastboot delete-logical-partition product_b
+}
+
+flashSystem () {
+	echo "Now the Image will be flashed to System partition."
+	fastboot flash system '/media/daniel/Daten/Redmi13C_AOSP/Releases/2024/07/06/Redmi13C_aosp-arm64-ab-gapps-14.0-20240706.img'
+
+
+}
+
+rebootRecovery () {
+	echo "Now the phone is rebooted into recovery"
+	fastboot reboot recovery
+}
+
+rebootFastbootD
+deletePartitions
+flashSystem
+rebootRecovery
+
+echo "Your phone will now be rebooted into recovery mode"
+echo "if it is no dirty flash please wipe data there"
+echo "and reboot your phone."
