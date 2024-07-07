@@ -9,7 +9,7 @@ echo "--------------------------------------"
 echo
 
 set -e
-FIMAGE=$1
+
 
 
 
@@ -29,7 +29,7 @@ deletePartitions () {
 
 flashSystem () {
 	echo "Now the Image will be flashed to System partition."
-	fastboot flash system "$FIMAGE"
+	fastboot flash system $1
 
 
 }
