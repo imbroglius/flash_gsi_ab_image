@@ -9,8 +9,8 @@ echo "--------------------------------------"
 echo
 
 set -e
+FIMAGE=$1
 
-IMAGE_FILE=$1
 
 rebootFastbootD () {
 	echo "we now boot the phone into FastbootD"
@@ -26,7 +26,7 @@ deletePartitions () {
 
 flashSystem () {
 	echo "Now the Image will be flashed to System partition."
-	fastboot flash system '/media/daniel/Daten/Redmi13C_AOSP/Releases/2024/07/06/Redmi13C_aosp-arm64-ab-gapps-14.0-20240706.img'
+	fastboot flash system "$FIMAGE"
 
 
 }
