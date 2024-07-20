@@ -1,4 +1,4 @@
-Scripts to flash GSI Images to AB-Style Phones
+# Scripts to flash GSI Images to AB-Style Phones
 
 flash.sh flashes the complete Image clean.
 
