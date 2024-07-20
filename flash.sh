@@ -20,6 +20,12 @@ rebootFastbootD () {
 	fastboot reboot fastboot
 }
 
+erasePartitions () {
+	echo "Now we erase the system partitions"
+	fastboot erase system
+	fastboot erase system_a
+	fastboot erase system_b
+
 deletePartitions () {
 	echo "Now we delete the partitions"
 	fastboot delete-logical-partition product
@@ -40,6 +46,7 @@ rebootRecovery () {
 }
 
 rebootFastbootD
+erasePartitions
 deletePartitions
 flashSystem
 rebootRecovery
