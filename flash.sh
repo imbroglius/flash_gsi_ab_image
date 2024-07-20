@@ -2,9 +2,9 @@
 
 echo
 echo "--------------------------------------"
-echo "          Flash ImbrogliOS Script     "
+echo "          Flash GSI Script            "
 echo "                  by                  "
-echo "              Imbroglius            "
+echo "              Imbroglius              "
 echo "--------------------------------------"
 echo
 
