@@ -2,4 +2,4 @@
 
 ## flash.sh flashes the complete Image clean.
 
-## dirtyflash.sh only makes a dirty flash. eg for update the image.
+## dirtyflash.sh only makes a dirty flash. eg for updating the image.
