@@ -33,13 +33,6 @@ rebootFastbootD () {
 	fastboot reboot fastboot
 }
 
-erasePartitions () {
-	echo "Now we erase the system partitions"
-	fastboot erase system
-	fastboot erase system_a
-	fastboot erase system_b
- }
-
 deletePartitions () {
 	echo "Now we delete the partitions"
 	fastboot delete-logical-partition product
@@ -49,7 +42,7 @@ deletePartitions () {
 
 flashSystem () {
 	echo "Now the Image will be flashed to System partition."
-	fastboot flash system flash.img
+	fastboot flash system imgtoflash.img
 
 }
 
@@ -59,7 +52,6 @@ rebootRecovery () {
 }
 
 rebootFastbootD
-erasePartitions
 deletePartitions
 flashSystem
 rebootRecovery
