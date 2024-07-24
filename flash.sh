@@ -38,6 +38,7 @@ erasePartitions () {
 	fastboot erase system
 	fastboot erase system_a
 	fastboot erase system_b
+ }
 
 deletePartitions () {
 	echo "Now we delete the partitions"
