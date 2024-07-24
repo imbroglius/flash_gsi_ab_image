@@ -50,7 +50,6 @@ flashSystem () {
 	echo "Now the Image will be flashed to System partition."
 	fastboot flash system "$1"
 
-
 }
 
 rebootRecovery () {
