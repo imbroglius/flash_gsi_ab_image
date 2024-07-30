@@ -42,7 +42,7 @@ deletePartitions () {
 
 flashSystem () {
 	echo "Now the Image will be flashed to System partition."
-	fastboot flash system imgtoflash.img
+	fastboot flash system flash.img
 
 }
 
