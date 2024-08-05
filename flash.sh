@@ -28,9 +28,8 @@ FIMAGE=$1
 
 
 rebootFastbootD () {
-	read -p "Press any key to continue. The Image you want to flash is: $1"
+	read -p "Press any key to continue. The Image you want to flash is: $FIMAGE"
 	echo "we now boot the phone into FastbootD"
- 	echo "$FIMAGE"
 	fastboot reboot fastboot
 }
 
