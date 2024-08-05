@@ -23,13 +23,14 @@ echo
 read -p "Press any key to continue. Or exit the script with Strg+C"
 
 set -e
-IMAGE=$1
+FIMAGE=$1
+
 
 
 rebootFastbootD () {
 	read -p "Press any key to continue. The Image you want to flash is: $1"
 	echo "we now boot the phone into FastbootD"
- 	echo "$IMAGE"
+ 	echo "$FIMAGE"
 	fastboot reboot fastboot
 }
 
@@ -42,7 +43,7 @@ deletePartitions () {
 
 flashSystem () {
 	echo "Now the Image will be flashed to System partition."
-	fastboot flash system flash.img
+	fastboot flash system "$FIMAGE"
 
 }
 
